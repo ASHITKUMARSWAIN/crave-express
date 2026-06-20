@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CraveExpress</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="nav-logo">
+            <a href="#home"><i class="fa-solid fa-utensils"></i> Crave<span>Express</span></a>
+        </div>
+
+        <!-- Toggle Button for Mobile Menu (Hidden on Desktop) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <style>
+
+
+.about-banner {
+    background: linear-gradient(135deg, #1e1e24 0%, #2d2d2d 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.about-banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-banner p {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+/* --- Alternating Content Rows --- */
+.about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 8%;
+}
+
+/* Reverses the order of text and image for the second row */
+.about-row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Red accent lines under headings */
+.about-text h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ff4757;
+    margin-top: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 550px;
+    height: 380px;
+    object-fit: cover; /* Forces the image to crop perfectly without stretching */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* --- About Page Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .about-banner {
+        padding: 60px 5%;
+    }
+
+    .about-banner h1 {
+        font-size: 32px;
+    }
+
+    .about-row, 
+    .about-row.row-reverse {
+        flex-direction: column; /* Stacks everything into a single column on mobile */
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 26px;
+    }
+
+    .about-image img {
+        height: 280px; /* Reduces image size slightly on mobile screens */
+    }
+}
+
+/* --- Chef Section --- */
+.chef-section {
+    background-color: #f8f8f8;
+    padding: 80px 8%;
+}
+
+.chef-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chef-image {
+    flex: 1;
+}
+
+.chef-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.chef-content {
+    flex: 1;
+}
+
+.chef-content h2 {
+    font-size: 32px;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.chef-title {
+    color: #ff4757;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.chef-content p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn-see-menu {
+    display: inline-block;
+    background-color: #ff4757;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-see-menu:hover {
+    background-color: #e03d4f;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .chef-container {
+        flex-direction: column;
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .chef-content h2 {
+        font-size: 26px;
+    }
+
+    .chef-image img {
+        max-width: 300px;
+        height: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Main About Us Content -->
+    <main class="about-page">
+        
+        <!-- About Header Banner -->
+        <section class="about-banner">
+            <h1>Our Story</h1>
+            <p>Cooking with love, delivering with care since 2018.</p>
+        </section>
+
+        <!-- Story Row 1: The Kitchen -->
+        <section class="about-row">
+            <div class="about-text">
+                <h2>Where Culinary Passion Meets Speed</h2>
+                <p>
+                    At CraveExpress, we believe that fast food shouldn't mean compromised quality. 
+                    Founded in 2018 by a group of passionate chefs and tech innovators, we set out with a simple goal: 
+                    to bridge the gap between premium restaurant-grade dining and rapid doorstep delivery.
+                </p>
+                <p>
+                    Every dish that leaves our kitchen is made-to-order. We don't use warming heat lamps, and we don't pre-package your food. 
+                    From chopping crisp vegetables to firing up the brick ovens, our team works around the clock to handcraft perfection.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="Chefs prepping fresh food in kitchen">
+            </div>
+        </section>
+
+        <!-- Story Row 2: Fresh Ingredients (Reversed Layout) -->
+        <section class="about-row row-reverse">
+            <div class="about-text">
+                <h2>Sourcing local, eating fresh</h2>
+                <p>
+                    Great meals start with great ingredients. That's why we partner exclusively with local farms, organic growers, and trusted local suppliers. 
+                    By sourcing our produce, dairy, and meats directly from communities near you, we reduce our carbon footprint while locking in unbeatable flavor.
+                </p>
+                <p>
+                    Whether you are devouring a cheesy artisan pizza, a crisp garden salad, or a gourmet burger, you can taste the dedication to sustainability and freshness in every bite.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1540914124281-342587941389?auto=format&fit=crop&w=600&q=80" alt="Fresh local marketplace ingredients">
+            </div>
+        </section>
+
+        <!-- Chef Section -->
+        <section class="chef-section">
+            <div class="chef-container">
+                <div class="chef-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Head Chef">
+                </div>
+                <div class="chef-content">
+                    <h2>Meet Our Head Chef</h2>
+                    <p class="chef-title">Executive Chef & Founder</p>
+                    <p>
+                        With over 15 years of experience in fine dining, our Head Chef brings world-class culinary expertise to every dish. 
+                        His passion for fresh ingredients and innovative techniques has earned CraveExpress recognition as one of the city's most innovative food delivery services.
+                    </p>
+                    <a href="index.html#services" class="btn-see-menu">See Menu</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+     <footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand & About -->
+            <div class="footer-col brand-col">
+                <a href="#home" class="footer-logo"><i class="fa-solid fa-utensils"></i> Crave<span>Express</span></a>
+                <p class="footer-desc">
+                    Bringing chef-crafted culinary masterpieces straight to your doorstep. Savor the flavor, skip the wait.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Catering Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to get special discounts, recipe updates, and weekly treats!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CraveExpress. All rights reserved. Made with <i class="fa-solid fa-heart heart-icon"></i> for food lovers.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Navbar</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="nav-logo">
+            <a href="#home"><i class="fa-solid fa-utensils"></i> Crave<span>Express</span></a>
+        </div>
+
+        <!-- Toggle Button for Mobile Menu (Hidden on Desktop) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main id="home" class="hero-section">
+        <div class="hero-overlay"></div> <!-- Dark overlay for text readability -->
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fa-solid fa-motorcycle"></i> Super Fast Delivery</span>
+                <h1>Craving Delicious Food? We've Got You Covered.</h1>
+                <p>
+                    Welcome to <strong>CraveExpress</strong>, where culinary passion meets lightning-fast delivery. 
+                    From sizzling hot pizzas to fresh, healthy salads, we source only the finest local ingredients 
+                    to bring chef-crafted meals straight to your doorstep. Satisfying your hunger is our mission.
+                </p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn-primary">Explore Menu</a>
+                    <a href="about.html" class="btn-secondary">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="info-section">
+        <div class="info-container">
+            
+            <!-- Card 1: Opening Hours -->
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3>Opening Hours</h3>
+                <p class="info-highlight">Monday - Friday</p>
+                <p>10:00 AM - 11:00 PM</p>
+                <p class="info-highlight">Saturday - Sunday</p>
+                <p>09:00 AM - 12:00 AM</p>
+            </div>
+
+            <!-- Card 2: Our Location -->
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3>Our Location</h3>
+                <p>123 Gourmet Avenue</p>
+                <p>Foodie District, NY 10001</p>
+                <a href="https://maps.google.com" target="_blank" class="info-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 3: Contact Email -->
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>For support & inquiries:</p>
+                <p><a href="mailto:hello@craveexpress.com" class="email-text">hello@craveexpress.com</a></p>
+                <p><a href="mailto:catering@craveexpress.com" class="email-text">catering@craveexpress.com</a></p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand & About -->
+            <div class="footer-col brand-col">
+                <a href="#home" class="footer-logo"><i class="fa-solid fa-utensils"></i> Crave<span>Express</span></a>
+                <p class="footer-desc">
+                    Bringing chef-crafted culinary masterpieces straight to your doorstep. Savor the flavor, skip the wait.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Legal & Support -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Catering Orders</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter Subscription -->
+            <div class="footer-col newsletter-col">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to get special discounts, recipe updates, and weekly treats!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 CraveExpress. All rights reserved. Made with <i class="fa-solid fa-heart heart-icon"></i> for food lovers.</p>
+        </div>
+    </footer>
+</body>
+</html>
