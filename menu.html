@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu - CraveExpress</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* --- Reset & Base Styles --- */
         * {
@@ -114,83 +116,34 @@
             transition: 0.3s ease;
         }
 
-        /* --- Elegant Image Banner Sections --- */
-        .image-banner {
-            position: relative;
-            height: 380px;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax style element */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .image-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.55); /* Dark tint layer overlay from screenshot */
-        }
 
-        .banner-text {
-            position: relative;
-            text-align: center;
-            color: #ffffff;
-            z-index: 2;
-        }
-
-        .banner-text span {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 20px;
-            display: block;
-            margin-bottom: 5px;
-            color: #f1f1f1;
-            letter-spacing: 1px;
-        }
-
-        .banner-text h1, .banner-text h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 38px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        /* --- Classic Clean Text Menu Block --- */
         .menu-text-section {
-            padding: 80px 10%;
-            max-width: 1100px;
+            padding: 60px 10%;
+            max-width: 1400px;
             margin: 0 auto;
             background-color: #ffffff;
         }
 
         .category-block {
-            margin-bottom: 60px;
-        }
-
-        .category-block:last-child {
-            margin-bottom: 0;
+            margin-bottom: 40px;
         }
 
         .category-title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            color: #111111;
-            margin-bottom: 35px;
+            color: #2d2d2d;
+            margin-bottom: 25px;
             letter-spacing: 0.5px;
+            border-bottom: 2px solid #ff4757;
+            padding-bottom: 10px;
         }
 
-        /* Responsive 2 Column Grid for items */
         .menu-items-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 80px;
-            row-gap: 35px;
+            column-gap: 60px;
+            row-gap: 25px;
         }
 
         .menu-item {
@@ -206,10 +159,9 @@
         }
 
         .item-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: #111111;
-            transition: color 0.2s ease;
+            font-size: 15px;
+            font-weight: 600;
+            color: #2d2d2d;
         }
         
         .menu-item:hover .item-name {
@@ -217,22 +169,22 @@
         }
 
         .item-price {
-            font-size: 15px;
-            font-weight: 700;
-            color: #111111;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ff4757;
         }
 
         .item-description {
             font-size: 13px;
-            color: #777777;
-            line-height: 1.6;
+            color: #666666;
+            line-height: 1.5;
         }
 
         /* --- Footer Styles --- */
         .main-footer {
             background-color: #1e1e24;
             color: #ffffff;
-            padding: 70px 8% 20px 8%;
+            padding: 50px 8% 20px 8%;
         }
 
         .footer-container {
@@ -273,29 +225,6 @@
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-links a {
-            width: 38px;
-            height: 38px;
-            background-color: rgba(255, 255, 255, 0.05);
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-
-        .social-links a:hover {
-            background-color: #ff4757;
-            transform: translateY(-3px);
         }
 
         .footer-col h4 {
@@ -388,31 +317,13 @@
             color: #777777;
         }
 
-        .heart-icon {
-            color: #ff4757;
-            animation: pulse 1.5s infinite;
-            display: inline-block;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-            100% { transform: scale(1); }
-        }
-
         /* --- Responsive Layout Rules --- */
         @media (max-width: 992px) {
-            .navbar, .main-footer {
-                padding: 15px 5%;
-            }
-            .nav-links {
-                gap: 20px;
-            }
             .menu-text-section {
-                padding: 60px 5%;
+                padding: 50px 5%;
             }
             .menu-items-grid {
-                column-gap: 40px;
+                column-gap: 30px;
             }
         }
 
@@ -496,155 +407,123 @@
         <!-- Navigation Links -->
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="index.html#contact-us">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
 
-    <!-- Top Banner Section (Matches top row of screenshot) -->
-    <div class="image-banner" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80');">
-        <div class="banner-text">
-            <span>Discover</span>
-            <h1>The Menu</h1>
-        </div>
-    </div>
-
-    <!-- First Menu Block Area: Burgers & Veggies -->
+    <!-- Menu Section -->
     <main class="menu-text-section">
+        <h1 style="text-align: center; margin-bottom: 50px; font-size: 36px; color: #2d2d2d;">Our Menu</h1>
         
         <!-- Category: Burgers -->
         <div class="category-block">
             <h3 class="category-title">Burgers</h3>
             <div class="menu-items-grid">
-                
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Classic</span>
+                        <span class="item-name">Classic Burger</span>
                         <span class="item-price">$10</span>
                     </div>
-                    <p class="item-description">Juicy chuck beef patty served with lettuce, tomato, onion and cheddar on a brioche bun.</p>
+                    <p class="item-description">Beef patty with lettuce, tomato, onion and cheese</p>
                 </div>
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Bacon</span>
+                        <span class="item-name">Bacon Burger</span>
                         <span class="item-price">$11</span>
                     </div>
-                    <p class="item-description">Chuck beef patty topped with smoked bacon and the usual toppings, served on brioche bun.</p>
+                    <p class="item-description">Beef patty with bacon, lettuce, tomato and cheese</p>
                 </div>
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Double</span>
+                        <span class="item-name">Double Burger</span>
                         <span class="item-price">$13</span>
                     </div>
-                    <p class="item-description">Two chuck beef patties served with lettuce, tomato, onion and cheddar, served on a brioche bun.</p>
+                    <p class="item-description">Two beef patties with cheese and toppings</p>
                 </div>
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Spicy</span>
+                        <span class="item-name">Spicy Burger</span>
                         <span class="item-price">$11</span>
                     </div>
-                    <p class="item-description">Chuck beef patty with house chili, sour cream and veggies served on a brioche bun.</p>
+                    <p class="item-description">Beef patty with jalapeños and spicy sauce</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- Category: Veggie -->
+        <!-- Category: Vegetarian -->
         <div class="category-block">
-            <h3 class="category-title">Veggie</h3>
+            <h3 class="category-title">Vegetarian</h3>
             <div class="menu-items-grid">
-                
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Tofu</span>
+                        <span class="item-name">Veggie Burger</span>
+                        <span class="item-price">$9</span>
+                    </div>
+                    <p class="item-description">Plant-based patty with lettuce, tomato and cheese</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Mushroom Burger</span>
                         <span class="item-price">$10</span>
                     </div>
-                    <p class="item-description">Deep fried tofu with blue cheese sauce, Boston lettuce and red onion chutney.</p>
+                    <p class="item-description">Grilled mushrooms with garlic and herbs</p>
                 </div>
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Carmelized</span>
-                        <span class="item-price">$11</span>
+                        <span class="item-name">Falafel Wrap</span>
+                        <span class="item-price">$9</span>
                     </div>
-                    <p class="item-description">Goat cheese matrix, warm sun tomatoes, grilled zucchini and bell peppers.</p>
+                    <p class="item-description">Fried chickpea patty with tahini sauce</p>
                 </div>
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Mushroom</span>
-                        <span class="item-price">$12</span>
+                        <span class="item-name">Grilled Cheese</span>
+                        <span class="item-price">$7</span>
                     </div>
-                    <p class="item-description">Portobello mushrooms with burger mayo, green pesto, green tomatoes, chopped onions.</p>
+                    <p class="item-description">Melted cheese on toasted bread</p>
                 </div>
+            </div>
+        </div>
 
+        <!-- Category: Sides -->
+        <div class="category-block">
+            <h3 class="category-title">Sides</h3>
+            <div class="menu-items-grid">
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Tikki</span>
-                        <span class="item-price">$10</span>
+                        <span class="item-name">Fries</span>
+                        <span class="item-price">$4</span>
                     </div>
-                    <p class="item-description">Potato and pea patty topped with indian spices, sweet mayo and red onions.</p>
+                    <p class="item-description">Crispy golden fries with salt</p>
                 </div>
-
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Cheese Fries</span>
+                        <span class="item-price">$6</span>
+                    </div>
+                    <p class="item-description">Fries topped with melted cheese</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Onion Rings</span>
+                        <span class="item-price">$5</span>
+                    </div>
+                    <p class="item-description">Crispy battered onion rings</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Coleslaw</span>
+                        <span class="item-price">$3</span>
+                    </div>
+                    <p class="item-description">Fresh cabbage salad</p>
+                </div>
             </div>
         </div>
 
     </main>
-
-    <!-- Mid-Section Image Banner Break (Matches bottom row backdrop of screenshot) -->
-    <div class="image-banner" style="background-image: url('https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1200&q=80');">
-        <div class="banner-text">
-            <h2>Our Side Dishes</h2>
-        </div>
-    </div>
-    <div class="menu-text-section">
-        
-        <!-- Category: Fries -->
-        <div class="category-block">
-            <h3 class="category-title">Fries</h3>
-            <div class="menu-items-grid">
-                
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Classic Fries</span>
-                        <span class="item-price">$5</span>
-                    </div>
-                    <p class="item-description">Juicy cut rustic potato halves seasoned lightly with sea salt and crisp parms.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Bacon Loaded Fries</span>
-                        <span class="item-price">$8</span>
-                    </div>
-                    <p class="item-description">Crisp cut fries loaded with melted premium cheese, chives, and smoked bacon bits.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Double Dipped Rings</span>
-                        <span class="item-price">$7</span>
-                    </div>
-                    <p class="item-description">Thick cut white onion rings layered in crispy golden beer batter coat mix.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Spicy Wedges</span>
-                        <span class="item-price">$6</span>
-                    </div>
-                    <p class="item-description">Baked potato wedges coated in house cajun hot chili oil pepper seasoning.</p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
 
     <!-- Identical Footer Section -->
     <footer class="main-footer">
@@ -652,12 +531,6 @@
             <div class="footer-col brand-col">
                 <a href="index.html#home" class="footer-logo"><i class="fa-solid fa-utensils"></i> Crave<span>Express</span></a>
                 <p class="footer-desc">Bringing chef-crafted culinary masterpieces straight to your doorstep. Savor the flavor, skip the wait.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                </div>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -665,15 +538,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="menu.html">Services</a></li>
-                    <li><a href="index.html#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul class="footer-links">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col newsletter-col">
@@ -681,7 +546,7 @@
                 <p>Subscribe to get special discounts and weekly treats!</p>
                 <form class="newsletter-form" onsubmit="event.preventDefault();">
                     <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="btn-subscribe" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
